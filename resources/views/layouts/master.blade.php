@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,13 +53,13 @@
                         {{--
                         <li><a href="#">Profile</a>
                         </li> --}}
-                        <li><a href="{{ route('userconfig') }}">Configuración</a>
+                        <li><a href="{{ route('userconfig') }}">Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
-                                Salir
+                                Logout
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
