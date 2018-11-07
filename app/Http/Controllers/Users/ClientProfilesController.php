@@ -17,7 +17,6 @@ use Tradesys\User;
 
 class ClientProfilesController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -25,7 +24,6 @@ class ClientProfilesController extends Controller
 
     public function index()
     {
-
         $user = User::where('id', Auth::user()->id)->first();
 
         $opentickets   = Ticket::where('user_id', Auth::user()->id)->where('status', '=', 'Open')->sum('total');
@@ -62,7 +60,7 @@ class ClientProfilesController extends Controller
 
         //graficos Options
         $options = Charts::create('area', 'highcharts')
-            ->title('Resumen Posiciones Abiertas')
+            ->title('Open positions summary')
             ->colors(['lightblue', 'pink', 'blue', 'red', 'purple', 'brown', 'yellow', 'green', 'silver', 'black', 'yellow'])
             ->labels(['Gold', 'Silver', 'Palladium', 'Platinium', 'Crude Oil', 'Gasoline', 'Cotton', 'Heating Oil', 'Natural Gas', 'Dollar Index', 'Bitcoin'])
             ->values([
@@ -96,13 +94,11 @@ class ClientProfilesController extends Controller
 
     public function configuser()
     {
-
         return view('users.profile.settings');
     }
 
     public function update(Request $request, User $user)
     {
-
         $user->update($request->all());
 
         return redirect()->route('userconfig');
@@ -110,7 +106,6 @@ class ClientProfilesController extends Controller
 
     public function withdraw()
     {
-
         $hora        = Carbon::now();
         $IPnumber    = getenv("REMOTE_ADDR"); //IP
         $bal         = Trade::userBalance();
@@ -124,7 +119,6 @@ class ClientProfilesController extends Controller
 
     public function senwithdraw(ClientWithdrawFormRequest $request)
     {
-
         $uguaranty = Trade::userBrokerGuaranty();
         $bal       = Trade::userBalance();
 
@@ -158,7 +152,6 @@ class ClientProfilesController extends Controller
 
     public function deposit()
     {
-
         $user        = User::find(Auth::id());
         $bal         = Trade::userBalance();
         $equity      = Trade::userEquity();
@@ -168,5 +161,4 @@ class ClientProfilesController extends Controller
 
         return view('users.profile.deposit', compact('user', 'bal', 'equity', 'uguaranty', 'depositos', 'marketValue'));
     }
-
 }

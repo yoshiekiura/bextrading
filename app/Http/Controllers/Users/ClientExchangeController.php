@@ -11,7 +11,6 @@ use Tradesys\Trade;
 
 class ClientExchangeController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -49,7 +48,7 @@ class ClientExchangeController extends Controller
         ];
 
         $charty = Charts::create('area', 'highcharts')
-            ->title('Resumen Gráfico Criptomonedas')
+            ->title('Crypto currecy summary')
             ->colors(['lightblue', 'pink', 'orange', 'red', 'purple', 'brown', 'yellow', 'green', 'silver'])
             ->labels(['Bitcoin', 'Ethereum', 'Ripple', 'Bitcoin Cash', 'Litecoin', 'Cardano', 'Monero', 'Dash', 'Ethereum Classic'])
             ->values([
@@ -67,7 +66,7 @@ class ClientExchangeController extends Controller
         $marketValue = Trade::userMarketValue();
         $hoy       = Carbon::now();
 
-        return view('users.exchange.index', compact('tickets', 'bal', 'equity', 'date', 'hoy', 'uguaranty', 'depositos', 'sumabit', 'suma', 'charty','marketValue'));
+        return view('users.exchange.index', compact('tickets', 'bal', 'equity', 'date', 'hoy', 'uguaranty', 'depositos', 'sumabit', 'suma', 'charty', 'marketValue'));
     }
 
     public function sumAllCoins()
