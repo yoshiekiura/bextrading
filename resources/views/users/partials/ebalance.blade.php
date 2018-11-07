@@ -38,7 +38,7 @@
                 <div class="row row-table row-flush">
                     <div class="col-xs-12">
                         <p class="mb0">${{ money_format('%i',$uguaranty)}}<em class="">USD</em></p>
-                        <h4 class="m0">Broker Guaranty</h4>
+                        <h4 class="m0">Broker Guarantee</h4>
                         <span class="m-t-10">
                <i class="text-c-green f-16 fa fa-credit-card-alt"></i>Broker Credit
              </span>

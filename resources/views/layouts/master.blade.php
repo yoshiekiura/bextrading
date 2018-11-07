@@ -46,7 +46,7 @@
                 <li class="dropdown dropdown-list">
                     <a href="#" data-toggle="dropdown" data-play="fadeIn" class="dropdown-toggle">
                         <strong style="color: black"><i class="fa fa-user-circle">&nbsp;</i>{{Auth::user()->name}}
-                            Cuenta Nº {{ Auth::id() }} </strong>
+                            Account Nº {{ Auth::id() }} </strong>
                     </a>
 
                     <ul class="dropdown-menu">

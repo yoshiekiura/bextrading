@@ -19,7 +19,7 @@
 
             <div data-toggle="play-animation" data-play="fadeInLeft" data-offset="0" data-delay="1400" class="panel widget">
 
-                <div class="panel-heading">Historial
+                <div class="panel-heading">Historical
                     <a href="javascript:void(0);" data-perform="panel-dismiss" data-toggle="tooltip" title="" class="pull-right" data-original-title="Close Panel">
                         <em class="fa fa-times"></em>
                     </a>

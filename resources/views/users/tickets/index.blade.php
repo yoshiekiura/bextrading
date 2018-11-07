@@ -53,7 +53,7 @@
                     <th>Commision</th>
                     {{-- <th>Fill</th> --}}
                     <th>Total</th>
-                    <th>Unit</th>
+                    <th>Market Value</th>
                    {{--  <th>Valor del Mercado</th> --}}
                   </tr>
                 </thead>
