@@ -1,0 +1,388 @@
+.section-full{
+    padding: 15px;
+}
+
+/*===== Accordions =====*/
+
+.elements-2 button.accordion {
+    background-color: #FFF;
+    color: #7ad02f;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 0px;
+    border: solid 1px #F0F0F0; 
+}
+
+.elements-2 button.accordion.active:hover {
+    background-color: #ffffff;
+}
+
+.elements-2 button.accordion:hover {
+    background-color: #ffffff;
+}
+
+.elements-2 button.accordion:after {
+    font-family: FontAwesome;
+    content: "\f077";
+    color: #FFF;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    color: #6ebb2a;
+}
+
+.elements-2 button.accordion.active:after {
+    font-family: FontAwesome;
+    content: "\f078";
+    color: #6ebb2a;
+}
+
+.elements-2 div.panel {
+    padding: 0 15px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.elements-2 .panel{
+    border: none;
+    margin: 0px;
+}
+
+
+/*===== BOXES AND ICONS 2 =====*/
+
+.box-block{
+    width: 100%;
+    height: 250px;
+    background: #f0f0f0;
+    padding: 30px 10px 20px 10px; 
+}
+
+.box-block .fa{
+    font-size: 40px;
+    color: #00354A;
+    margin-bottom: 10px;
+}
+
+.box-block p{
+    text-align: center;
+    color: #333;
+}
+
+.box-block h3{
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.elements-2 .box-block{
+    width: 100%;
+    height: 250px;
+    background: #f0f0f0;
+    padding: 30px 10px 20px 10px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.elements-2 .box-block:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*===== BOXES AND ICONS 3 =====*/
+
+.elements-3 .box-block{
+    width: 100%;
+    height: 250px;
+    background: #f0f0f0;
+    padding: 30px 10px 20px 10px;
+    transition: 0.3s;
+}
+
+.elements-3 .box-block:hover{
+    width: 100%;
+    height: 250px;
+    background: #666666;
+    padding: 30px 10px 20px 10px; 
+}
+
+.elements-3 .box-block .fa{
+    font-size: 40px;
+    color: #00354A;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.elements-3 .box-block p{
+    text-align: center;
+    color: #333;
+    transition: 0.3s;
+}
+
+.elements-3 .box-block h3{
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.elements-3 .box-block:hover .fa{
+    font-size: 40px;
+    color: #FFF;
+    margin-bottom: 10px;
+    
+}
+
+.elements-3 .box-block:hover p{
+    text-align: center;
+    color: #FFF;
+}
+
+.elements-3 .box-block:hover h3{
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+}
+
+/* ==========================================================================
+    #CALL TO ACTION
+============================================================================= */
+.call-out{
+    width: 100%;
+    height: auto;
+    padding: 30px 20px 45px 20px;
+    background-color: #0099D7;
+    border-radius: 4px;
+}
+
+.call-out h2, p{
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.5;
+    color: #FFF;
+}
+
+.call-out h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.call-out p{
+    margin-top: -5px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.btn-callout{
+    float: right;
+    margin-top: -45px;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #FFF;
+    font-size: 17px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.btn-callout:hover {
+  color: #7ad02f;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.btn-callout:focus,
+.btn-callout.focus {
+  color: #7ad02f;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+/*===== CALL TO ACTION STYLE 2 =====*/
+
+.elements-2 .call-out{
+    width: 100%;
+    height: auto;
+    padding: 30px 20px 45px 20px;
+    background-color: #00354A;
+    border-radius: 4px;
+}
+
+.elements-2 .btn-callout{
+    float: right;
+    margin-top: -45px;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #FFF;
+    font-size: 17px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.elements-2 .btn-callout:hover {
+  color: #0ac2f5;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.elements-2 .btn-callout:focus,
+.elements-2 .btn-callout.focus {
+  color: #0ac2f5;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+/*===== CALL TO ACTION STYLE 3 =====*/
+
+.call-out{
+    width: 100%;
+    height: auto;
+    padding: 30px 20px 45px 20px;
+    border-radius: 4px;
+}
+
+.call-out h2, p{
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.5;
+    color: #FFF;
+}
+
+.call-out h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.call-out p{
+    margin-top: -5px;
+    font-size: 13px;
+}
+
+.btn-callout{
+    float: right;
+    margin-top: -45px;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #FFF;
+    font-size: 17px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.btn-callout:hover {
+  color: #7ad02f;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.btn-callout:focus,
+.btn-callout.focus {
+  color: #7ad02f;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+@media (max-width: 992px) { 
+
+.box-block{
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+/*===== CALL TO ACTION =====*/
+.call-out{
+    width: 100%;
+    height: auto;
+    padding: 30px 20px 35px 20px;
+    border-radius: 4px;
+}
+    
+.call-out h2{
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+}
+
+.call-out p{
+    margin-top: -5px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.btn-callout{
+    float: none;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #FFF;
+    font-size: 17px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #FFF;
+}
+    
+    
+.elements-2 .btn-callout{
+    float: none;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #FFF;
+    font-size: 17px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #FFF;
+}
+    
+}
+
+@media (max-width: 767px) { 
+    
+/*===== CALL TO ACTION =====*/
+.call-out h2{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.call-out p{
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.btn-callout{
+    float: none;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 25px;
+    border: 1px solid #FFF;
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #FFF;
+}
+    
+.elements-2 .btn-callout{
+    float: none;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 25px;
+    border: 1px solid #FFF;
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #FFF;
+}
+    
+}

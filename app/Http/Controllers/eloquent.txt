@@ -1,0 +1,85 @@
+            //$users = User::where("estado","=",1)
+            // ->whereNotNull('updated_at')
+            // ->whereNull('email')
+            // ->whereIn('id', [1, 2, 3])
+            // ->whereBetween('edad', [1, 30])
+            // ->where('username','like','%ad%')
+            //->orWhere('username','=','koderke')
+            // ->orderBy('username')
+            // ->orderBy('created_at','desc')
+            // ->skip(10)->take(5)
+            // ->get();
+            // $userId = Auth::id();
+            // $UserTrades = Ticket::all()->where($userId,'==',$username);
+            // $open = Ticket::all()->where('status','==','Closed');
+            // $tickets = Ticket::whereIn('user_id',$user);
+
+            <?php $sum = 0; ?>
+            @foreach($solicitudAp as $reporte)
+               // La tabla...
+
+               <?php $sum += $reporte->SolicitudesIngresadas; ?>
+            @endforeach
+
+            Solicitudes totales: {{ $sum }}
+
+
+            /// exchange
+            $userWithexchange = User::with(['exchanges' => function ($query) {
+                        $query->select("id", "qty");
+
+
+
+                    $trades = Trade::whereNotNull('exchange_id')
+                        ->get();
+                    $exchanges = Exchange::ExhangeStatusOpen()->get();
+
+                    $a = 0;
+                    foreach ($trades as $trade) {
+                        $a += $trade->exchange->total;
+                    }
+                    $product = '';
+
+                    $date = Carbon::now();
+                    foreach ($exchanges as $tic) {
+                        $cant = $tic->qty;
+                        $pro = $tic->product_id;
+                    }
+
+                    $suma = Exchange::sumaCurrency()->get();
+
+                    dd($suma);
+
+                    $sumabit = 0;
+                    foreach ($suma as $valor) {
+                        $sumabit += $valor->qty;
+                    }
+
+
+                    {!! Form::selectMonth('month',['placeholder' => 'Pick a size...']) !!}
+
+                    {!! Form::selectRange('number', 10, 20) !!}
+
+                    {!!Form::submit('Click Me!') !!}
+
+                    {!! Form::label('email', 'E-Mail Address', ['class' => 'awesome']) !!}
+
+                    {!! Form::text('email') !!}
+
+                    {!! Form::select('size', ['S' => 'Seleccione', 'L' => 'Large', 'Sm' => 'Small'], 'S') !!}
+
+                    {!! Form::label('nombre','Nombre:',['class'=>'form-group']) !!}
+                    {!! Form::text('nombre',null,$attributes = ['placeholder'=>'nombre completo']) !!}
+                    {!! Form::checkbox('name', 'este es el valor del check box') !!}
+                    {!! Form::radio('name', 'value') !!}
+                    {!! Form::number('numero', 'value') !!}
+                    {!! Form::date('name', \Carbon\Carbon::now()) !!}
+
+                    {!! Form::select('size', ['L' => 'Large', 'S' => 'Small'], null, ['placeholder' => 'Pick a size...']) !!}
+
+                    {!! Form::select('animal',[
+                        'Cats' => ['leopard' => 'Leopard'],
+                        'Dogs' => ['spaniel' => 'Spaniel'],
+                    ]) !!}
+
+

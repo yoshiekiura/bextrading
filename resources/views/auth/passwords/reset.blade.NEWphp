@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <!--SEO Meta Tags-->
+    <meta charset="utf-8">
+    <!-- SITE TITLE -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ config('app.name', 'CoinSys') }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('theme/app/css/bootstrap.css') }}">
+
+    <!-- Icon CSS -->
+    <link href="{{ asset('theme/css/themify-icons.css') }}" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{ asset('theme/plugins/fontawesome/css/font-awesome.css') }}">
+
+    <!-- Owl Carousel CSS -->
+    <link href="{{ asset('theme/css/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('theme/css/owl.theme.default.min.css') }}" rel="stylesheet">
+
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" href="{{ asset('theme/css/magnific-popup.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{ asset('theme/app/css/app.css') }}">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+
+
+  <body  data-spy="scroll" data-target="#data-scroll">
+
+    <!-- Navbar -->
+    <div class="navbar navbar-custom sticky" role="navigation">
+        <div class="container">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span
+                    class="blue-text"></span></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols"
+                            :
+                            [
+                            {
+                                "title": "S&P 500",
+                                "proName": "INDEX:SPX"
+                            },
+                            {
+                                "title": "CRUDE OIL/USD",
+                                "proName": "NYMEX:CLZ2018"
+                            },
+                            {
+                                "title": "GOLD/USD",
+                                "proName": "OANDA:XAUUSD"
+                            },
+                            {
+                                "title": "BTC/USD",
+                                "proName": "BITFINEX:BTCUSD"
+                            },
+                            {
+                                "title": "ETH/USD",
+                                "proName": "BITFINEX:ETHUSD"
+                            }
+                            ],
+                            "locale"
+                            :
+                            "en",
+                            "linkPageTemplate"
+                            :
+                            "https://tradesys.app/member/exchange?950"
+                        }
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+
+                <!-- Navbar-header -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <i class="ti-menu"></i>
+                    </button>
+                    <!-- LOGO -->
+
+                    <a class="navbar-brand logo" href="{{ route('inicio') }}">
+                        <i class="fa fa-line-chart"></i>{{ config('app.name') }}
+                    </a>
+                </div>
+                <!-- end navbar-header -->
+                @if (Route::has('login'))
+
+                <!-- menu -->
+                <div class="navbar-collapse collapse" id="data-scroll">
+                    <ul class="nav navbar-nav navbar-left">
+
+                        <li class="active">
+                            <a class="scroll-func" href="{{ url('/') }}">Home</a>
+                        </li>
+
+                        <li>
+                            <a class="scroll-func" href="#About">About</a>
+                        </li>
+
+                        <li>
+                            <a href="#Currencies">Currencies</a>
+                        </li>
+                    </ul>
+                    @auth
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="mx-2">
+                           <a class="btn btn-danger btn-block" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-logout"></i>
+                                        Logout
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                        </li>
+                    </ul>
+
+                    @else
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="mx-2">
+                            <button class="btn btn-primary btn-block" onclick="window.location.href='{{ route('register') }}'"><i class="glyphicon glyphicon-user"></i> Register</button>
+                        </li>
+
+                        <li class="mx-2">
+                           <button class="btn btn-success btn-block" onclick="window.location.href='{{ route('login') }}'"><i class="fa fa-key"></i> Login</button>
+                       </li>
+                   </ul>
+                   @endauth
+
+                   @endif
+               </div>
+               <!--/Menu -->
+           </div>
+           <!-- end container -->
+       </div>
+
+<!-- HOME -->
+<section class="home home-small" id="home">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-wrapper home-intro row vertical-content">
+
+                    <div class="col-md-6 col-sm-8">
+                        <div class="tabbable-panel">
+                            <div class="tabbable-line">
+                             <div class="tab-content tab-content-BuySell m-t-9">
+
+                              <div class="tab-pane active" id="tab_default_2">
+                                <div class="panel panel-body">
+                                   <form class="intro-form" id="invite-2" method="POST" action="{{ route('password.request') }}">
+                                    {{ csrf_field() }}
+                                     <input type="hidden" name="token" value="{{ $token }}">
+
+                                    <h5><i class="fa fa-question-circle"></i> Password Reset<span>Forgot password ? Reset now!</span></h5>
+                                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                     <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" required autofocus>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                                    <button type="submit" class="btn btn-secondary btn-block">Reset</button>
+
+                                </form>
+                                <span id="result"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- end col -->
+</div> <!-- end row -->
+</div>
+<!-- end container -->
+</section>
+<!-- END HOME -->
+
+
+
+
+<!-- FOOTER -->
+<footer class="bg-dark footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-12">
+                <h4 class="logo"><i class="fa fa-line-chart"></i>{{ config('app.name') }}</h4>
+                <p>En MY CGO MARKETS hemos recorrido un camino de cambios, optimizaciones y crecimiento. Todo esto con
+                    una visión de alta tecnología e inteligencia desde el desarrollo, manejo de riesgo. Así mismo, nos
+                    caracterizamos por los resultados a plazos determinados, asset management y principalmente en la
+                satisfacción de nuestros socios, clientes e inversionistas.</p>
+
+                <ul class="list-inline social">
+                    <li>
+                        <a href="javascript:void(0);" class="bg-twitter"><i class="ti-twitter-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="bg-dribbble"><i class="ti-dribbble"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="bg-linkedin"><i class="ti-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="bg-googleplus"><i class="ti-google"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="bg-facebook"><i class="ti-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-md-offset-2">
+                <h5>Soluciones</h5>
+                <ul class="list-unstyled footer-list">
+                    <li><a href="#">Fee Info</a></li>
+                    <li><a href="#">Start Trading</a></li>
+                    <li><a href="#">We are Hiring</a></li>
+                    <li><a href="#">Blog Posts</a></li>
+                    <li><a href="#">API Docs</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <h5>Enlaces importantes</h5>
+                <ul class="list-unstyled footer-list">
+                    <li><a href="#About">Nosotros</a></li>
+                    <li><a href="#">Help &amp; Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+        </div> <!-- end row -->
+
+
+    </div> <!-- end container -->
+</footer>
+<!-- end FOOTER -->
+
+
+<!-- COPYRIGHT -->
+<div class="footer-alt bg-dark">
+    <p class="copy-rights">2018 © {{config('app.name')}}. All Rights Reserved</p>
+</div>
+
+<script>
+    function corpSelectCheck(nameSelect) {
+        console.log(nameSelect);
+        if (nameSelect) {
+            admOptionValue = document.getElementById("Corporativa").value;
+            if (admOptionValue == nameSelect.value) {
+                document.getElementById("corpDivCheck").style.display = "block";
+            }
+            else {
+                document.getElementById("corpDivCheck").style.display = "none";
+            }
+        }
+
+        if (nameSelect) {
+            admOptionValue = document.getElementById("Individual").value;
+            if (admOptionValue == nameSelect.value) {
+                document.getElementById("indDivCheck").style.display = "block";
+            }
+            else {
+                document.getElementById("indDivCheck").style.display = "none";
+            }
+        }
+
+
+        else {
+            document.getElementById("corpDivCheck").style.display = "none";
+        }
+    }
+
+
+</script>
+
+
+<script src="{{ asset('theme/plugins/jquery/jquery.js') }}"></script>
+<script src="{{ asset('theme/plugins/bootstrap/js/bootstrap.js') }}"></script>
+
+<!-- Sticky Header -->
+<script src="{{ asset('theme/js/jquery.sticky.js') }}"></script>
+
+<!-- Jquery easing -->
+<script src="{{ asset('theme/js/jquery.easing.1.4.1.js') }}"></script>
+
+<!-- Owl Carousel -->
+<script src="{{ asset('theme/js/owl.carousel.min.js') }}"></script>
+
+<!-- Magnific Popup -->
+<script src="{{ asset('theme/js/jquery.magnific-popup.js') }}"></script>
+
+<!-- Custom js -->
+<script src="{{ asset('theme/js/landing.js') }}"></script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>
