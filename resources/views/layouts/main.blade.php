@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta content="MyCGO-Interface" name="description" />
-    <meta name="keywords" content="crypto, commodities, bitcoins, ethereum, dogecoin, iota, ripple, siacoin, exchange, trading platform, crypto trading, mycgo, CGO Markets">
+    <meta name="keywords" content="crypto, commodities, bitcoins, ethereum, dogecoin, iota, ripple, siacoin, exchange, trading platform, crypto trading">
     <title>{{ config('app.name', 'TradeSys') }}</title>
     <link rel="stylesheet" href=" {{ asset('theme/app/css/bootstrap.css') }}">
     <link rel="stylesheet" href=" {{ asset('theme/plugins/fontawesome/css/font-awesome.css') }}">

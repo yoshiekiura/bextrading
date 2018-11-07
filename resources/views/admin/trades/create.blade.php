@@ -92,18 +92,17 @@
                                 <option value="Account Funding">Account Funding</option>
                                 <option value="Additional Funds">Additional Funds</option>
                                 <option value="Bank Trans Fee">Bank Trans Fee</option>
-                                <option value="CGO Broker Guaranty">CGO Broker
+                                <option value="Broker Guaranty">Broker
                                     Guaranty
                                 </option>
-                                <option value="CGO Broker Guaranty Payment">CGO Broker
+                                <option value="Broker Guaranty Payment">Broker
                                     Guaranty Payment
                                 </option>
-                                <option value="CGO Referral Bonus">CGO Referral Bonus
+                                <option value="CGO Referral Bonus">Referral Bonus
                                 </option>
-                                <option value="CGO Enhancement Bonus">CGO Enhancement
+                                <option value="CGO Enhancement Bonus">Enhancement
                                     Bonus
-                                </option>
-                                <option value="CGO Bonus">CGO Bonus</option>
+                                </option>Bonus</option>
                                 <option value="Withdrawal Funds">Withdrawal Funds
                                 </option>
                                 <option value="Credit Funds">Credit Funds</option>
