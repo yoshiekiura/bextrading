@@ -110,7 +110,7 @@
                   data-effect="top(45)"
                   data-duration="2000"
                   data-delay="3300"
-                  data-ease="easeOutExpo">{{ __("Energy moves the world, thats why one of the most important investment strategiest is working as a team leader.") }}
+                  data-ease="easeOutExpo">{{ __("Energy moves the world, thats why one of the most important investment strategies is working as a team leader.") }}
                </h3>
                <a class="ms-layer btn sbut2 white margin-top2"
                   style="left: 110px; top: 380px;"
@@ -161,7 +161,7 @@
                    data-effect="top(45)"
                    data-duration="2000"
                    data-delay="3300"
-                   data-ease="easeOutExpo">{{ __("Work on international markets Gold, Silver, Currecies, Index") }}
+                   data-ease="easeOutExpo">{{ __("Work in international markets Gold, Silver, Currencies, Index") }}
                </h3>
                <a class="ms-layer btn sbut2 white margin-top2"
                   style="left: 110px; top: 380px;"

@@ -176,8 +176,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            <state relative-caret-position="243">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding>
                 <element signature="e#44#72#0#PHP" expanded="true" />
               </folding>
@@ -427,6 +427,23 @@
       <path value="$PROJECT_DIR$/public/vendor/backpack/colorbox/package.json" />
       <path value="$PROJECT_DIR$/public/vendor/backpack/cropper/package.json" />
       <path value="$PROJECT_DIR$/public/vendor/backpack/select2/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Flot/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/bootstrap-datepicker/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/bootstrap-daterangepicker/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/chart.js/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/ckeditor/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/eve-raphael/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/ion.rangeSlider/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-slimscroll/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/morris.js/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/select2/package.json" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/package.json" />
+      <path value="$PROJECT_DIR$/vendor/backpack/crud/src/public/colorbox/package.json" />
+      <path value="$PROJECT_DIR$/vendor/backpack/crud/src/public/cropper/package.json" />
+      <path value="$PROJECT_DIR$/vendor/backpack/crud/src/public/select2/package.json" />
     </packageJsonPaths>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -537,6 +554,21 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/backpack/crud" />
+      <path value="$PROJECT_DIR$/vendor/backpack/base" />
+      <path value="$PROJECT_DIR$/vendor/prologue/alerts" />
+      <path value="$PROJECT_DIR$/vendor/backpack/pagemanager" />
+      <path value="$PROJECT_DIR$/vendor/backpack/menucrud" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/vendor/creativeorange/gravatar" />
+      <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-sluggable" />
+      <path value="$PROJECT_DIR$/vendor/venturecraft/revisionable" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -899,7 +931,7 @@
       <workItem from="1541537816553" duration="136000" />
       <workItem from="1541538004207" duration="46000" />
       <workItem from="1541538052281" duration="1023000" />
-      <workItem from="1541547239629" duration="3973000" />
+      <workItem from="1541547239629" duration="4497000" />
     </task>
     <servers />
   </component>
@@ -930,7 +962,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="636968000" />
+    <option name="totallyTimeSpent" value="637492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="840" extended-state="0" />
@@ -1389,8 +1421,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state relative-caret-position="243">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding>
             <element signature="e#44#72#0#PHP" expanded="true" />
           </folding>
