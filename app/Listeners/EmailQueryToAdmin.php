@@ -7,7 +7,6 @@ use Tradesys\Events\ContactAdviser;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-
 class EmailQueryToAdmin
 {
     /**
@@ -42,9 +41,8 @@ class EmailQueryToAdmin
 
         Mail::send('mail.contactBroker', $fields, function ($message) use ($fields) {
             $message->from($fields['email']);
-            $message->subject('Contacto desde MyCGO');
-            $message->to('clients@mycgo.net');
+            $message->subject('New contact from Berlinger');
+            $message->to('info@berlingercapital.com');
         });
-
     }
 }

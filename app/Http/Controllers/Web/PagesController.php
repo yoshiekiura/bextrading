@@ -166,11 +166,11 @@ class PagesController extends Controller
                 'mensaje' => $request->get('message'),
         ];
 
-        Mail::to('keyser@bextrade.com')
+        Mail::to('info@berlingercapital.com')
                 ->send(new ContactPageForm($data));
 
         return back()
-                ->with('flash', 'Su Formulario de contacto fue enviado exitósamente!');
+                ->with('flash', 'Form sent out succesfully!');
     }
 
     public function socios()

@@ -5,6 +5,7 @@ namespace Tradesys;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tradesys\Notifications\ResetPasswordNotification;
+use Tradesys\Role;
 
 class User extends Authenticatable
 {

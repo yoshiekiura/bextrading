@@ -28,7 +28,7 @@ class UsersController extends Controller
         $deposits = Trade::adminDeposits();
 
         // $users = User::where('name', '!=', 'Admin')->orderBy('id', 'ASC')->get();
-        $users = User::where('name', '!=','Admin')->orderBy('id','DESC')->paginate(30);
+        $users = User::where('name', '!=', 'Admin')->orderBy('id', 'DESC')->paginate(30);
 
         return view('admin.users.index', compact('users', 'balance', 'equity', 'brokergu', 'deposits'));
     }
@@ -57,7 +57,7 @@ class UsersController extends Controller
     {
         $user->update($request->all());
 
-        return redirect()->back()->with('flash', 'Datos de usuario actualizados');
+        return redirect()->back()->with('flash', 'User data has bee updated');
     }
 
     public function sumCoinsUser($user)
@@ -148,7 +148,7 @@ class UsersController extends Controller
         $deposits = Trade::adminDeposits();
         $marketValue = Trade::adminUserMarketVal($user);
 
-        return view('admin.users.userTradeList', compact('trades', 'client', 'hoy', 'balances', 'guaranty', 'balance', 'equity', 'brokergu', 'deposits','marketValue'));
+        return view('admin.users.userTradeList', compact('trades', 'client', 'hoy', 'balances', 'guaranty', 'balance', 'equity', 'brokergu', 'deposits', 'marketValue'));
     }
 
     public function debts()
@@ -171,6 +171,6 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id)->delete();
 
-        return back()->with('flash'," Usuario con cuenta nº $id fue elimado correctamente");
+        return back()->with('flash', " client with account nº $id was deleted correctly");
     }
 }

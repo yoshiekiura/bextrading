@@ -9,12 +9,12 @@ use Illuminate\Notifications\Messages\MailMessage;
 
 class ResetPasswordNotification extends Notification
 {
-/**
-     * The password reset token.
-     *
-     * @var string
-     */
-public $token;
+    /**
+         * The password reset token.
+         *
+         * @var string
+         */
+    public $token;
 
     /**
      * Create a notification instance.
@@ -47,12 +47,11 @@ public $token;
     public function toMail($notifiable)
     {
         return (new MailMessage)
-        ->subject('Solicitud de reestablecimiento de contraseña')
-        ->greeting('Estimado '.$notifiable->name)
-        ->line('Recibes este correo porque se solicitó un reestablecimiento de contraseña para su cuenta.')
-        ->action('Reestablecer Contraseña', url(config('app.url').route('password.reset', $this->token, false)))
-        ->line('Si no realizaste esta petición puedes ignorar este correo, y nada habrá cambiado.')
-        ->salutation('Saludos');
-
+        ->subject('Request New Password')
+        ->greeting('Dear '.$notifiable->name)
+        ->line('you received this email because you want to re establish a new password for this account.')
+        ->action('Re-Establish password', url(config('app.url').route('password.reset', $this->token, false)))
+        ->line('If you did not request this. Please forget about it, nothing has changed.')
+        ->salutation('Cheers');
     }
 }

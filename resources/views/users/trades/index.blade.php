@@ -78,7 +78,7 @@
                                </td>
 
                                <td class="text-right">
-                                <p>State</p>
+                                <p>Status</p>
                             </td>
                         </tr>
                     </thead>
@@ -157,9 +157,9 @@
         <table class="table">
             <thead>
               <tr>
-               <th> Balance del Portafolio </th>
-               <th>Saldo Efectivo</th>
-               <th>Balance Total</th>
+               <th>Portfolio Equity </th>
+               <th>Cash Equity</th>
+               <th>Total</th>
            </tr>
        </thead>
        <tbody>
@@ -172,7 +172,7 @@
 </table>
 </div>
 @if ($uguaranty > 0)
-<h4 style="color: #b71c1c">Your account ramain a debt for ${{ money_format('%i' , $uguaranty) }} on concept for Broker Guaranty. Please cancel as soon as possible.
+<h4 style="color: #b71c1c">Your account has outstanding bill for Broker Guaranty of ${{ money_format('%i' , $uguaranty) }}. Please pay all your bills on time, and pay off your debt as quickly as possible.
        </h4>
 @endif
 </div>
@@ -187,7 +187,7 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div data-toggle="play-animation" data-play="fadeInLeft" data-offset="0" data-delay="1400" class="panel widget">
-                <div class="panel-heading">Historial Criptomonedas
+                <div class="panel-heading">Cryptocurrency Historical
                     <a href="javascript:void(0);" data-perform="panel-dismiss" data-toggle="tooltip" title="" class="pull-right" data-original-title="Close Panel">
                         <em class="fa fa-times"></em>
                     </a>
@@ -198,14 +198,14 @@
                 <div class="panel-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-heading">All Markets |
-                            <small>Mercado Criptodivisas</small>
+                            <small>Cryptocurrency</small>
                         </div>
                         <div class="panel-body">
                             @php setlocale(LC_MONETARY, 'en_US');
                             @endphp
 
                             <div class="panel-heading">
-                                <h2>Historial Criptodivisas</h2>
+                                <h2>Crypto-Currency Historical</h2>
                             </div>
                             @if ($trades->count() > 0)
                             <div class="table-responsive">
@@ -233,10 +233,10 @@
                                                 Debit
                                             </td>
                                             <td class="text-center">
-                                                Tipo Cambio
+                                                Rate
                                             </td>
                                             <td class="text-center">
-                                                Comisión
+                                                Commision
                                             </td>
                                             <td class="text-center">
                                                 Total
@@ -307,7 +307,7 @@
                         </div>
                         @else
                         <div class="col-6">
-                            <h3>No hay intercambios de divisas...</h3>
+                            <h3>No records found...</h3>
                         </div>
                         @endif {{$tradexs->render()}}
 

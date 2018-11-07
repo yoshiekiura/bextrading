@@ -19,7 +19,6 @@ use Tradesys\Year;
 
 class TicketsController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -106,7 +105,7 @@ class TicketsController extends Controller
         //uso adecuado de la funcion brokerGuaranty
         $guaranty = $this->brokerGuaranty($name->id);
 
-        return back()->with('flash', "El balance de $name->name es de $ $balance con un Broker Guaranty de $ $guaranty");
+        return back()->with('flash', "Balance $name->name is  $ $balance in a broker guaranty of $ $guaranty");
     }
 
     // guarda el new ticket
@@ -151,10 +150,9 @@ class TicketsController extends Controller
         $trade->save();
 
         return redirect()->route('ticketuser', $trade->user_id)->with('flash', 'Ticket has been created!');
-
     }
 
-// esta funcion esta sobre escrita en la entidad Trade
+    // esta funcion esta sobre escrita en la entidad Trade
     public static function brokerGuaranty($user)
     {
         // Auth::user()->authorizeRoles('admin');
@@ -169,7 +167,7 @@ class TicketsController extends Controller
         return $guaranty;
     }
 
-// vende el tickete de un usuario en la vista user
+    // vende el tickete de un usuario en la vista user
     public function sellticket($ticket)
     {
         Auth::user()->authorizeRoles('admin');
@@ -208,7 +206,6 @@ class TicketsController extends Controller
 
     public function update(Ticket $ticket, TicketUpdateRequest $request)
     {
-
         $fee = $ticket->fee->amount;
         // $fees = Fee::where('id', $ticket->fee_id)->get();
         // foreach ($fees as $fee) {
@@ -256,5 +253,4 @@ class TicketsController extends Controller
         $ticket = Ticket::find($ticket)->delete();
         return back()->with('flash', 'Ticket has been deleted!');
     }
-
 }

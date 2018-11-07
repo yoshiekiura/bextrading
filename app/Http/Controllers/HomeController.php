@@ -71,7 +71,7 @@ class HomeController extends Controller
 
         //graficos Options
         $options = Charts::create('line', 'highcharts')
-        ->title('Resumen Posiciones Abiertas')
+        ->title('Summary Open Positions')
         ->colors(['lightblue', 'pink', 'blue', 'red', 'purple', 'brown', 'yellow', 'green', 'silver', 'black', 'gray'])
         ->labels(['Gold', 'Silver', 'Palladium', 'Platinium', 'Crude Oil', 'Gasoline', 'Cotton', 'Heating Oil', 'Natural Gas', 'Dollar Index', 'Bitcoin'])
         ->values([
@@ -83,7 +83,7 @@ class HomeController extends Controller
 
         //graficos opt positions
         $chart = Charts::create('pie', 'highcharts')
-        ->title('Resumen Posiciones Abiertas vs Cerradas')
+        ->title('Summary open positions vs closed positions')
         ->colors(['lightblue', 'orange'])
 
         ->labels(['Closed', 'Open'])
@@ -92,7 +92,7 @@ class HomeController extends Controller
 
         //grafico monedas
         $charty = Charts::create('bar', 'highcharts')
-        ->title('Resumen Intercambio de Criptomonedas')
+        ->title('Summary Crypto Exchange')
         ->colors(['lightblue', 'pink', 'orange', 'red', 'purple', 'brown', 'yellow', 'green', 'silver'])
         ->labels(['Bitcoin', 'Ethereum', 'Ripple', 'Bitcoin Cash', 'Litecoin', 'Cardano', 'Monero', 'Dash', 'Ethereum Classic'])
         ->values([
@@ -108,8 +108,6 @@ class HomeController extends Controller
         $depositos = Trade::userDeposits();
 
 
-        return view('users.index', compact('options', 'chart', 'charty','bal','equity','uguaranty','depositos'));
+        return view('users.index', compact('options', 'chart', 'charty', 'bal', 'equity', 'uguaranty', 'depositos'));
     }
-
-
 }

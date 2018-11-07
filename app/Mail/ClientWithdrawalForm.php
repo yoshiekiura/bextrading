@@ -41,7 +41,7 @@ class ClientWithdrawalForm extends Mailable
     public function build()
     {
         return $this->markdown('emails.ClientWithdrawalForm')
-            ->from('noreply@myemaildomain.net')
-            ->subject('Retiro de Fondos');
+            ->from('noreply@berlingercapital.com')
+            ->subject('ClientWithdrawal Funds');
     }
 }

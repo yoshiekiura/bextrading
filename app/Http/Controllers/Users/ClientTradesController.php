@@ -12,7 +12,6 @@ use Tradesys\User;
 
 class ClientTradesController extends Controller
 {
-
     public function __construct()
     {
         return $this->middleware('auth');
@@ -20,7 +19,6 @@ class ClientTradesController extends Controller
 
     public function index()
     {
-
         $hoy  = Carbon::now();
         $user = Auth::id();
         //$this->authorize('tradePass', $user);
@@ -59,7 +57,6 @@ class ClientTradesController extends Controller
 
     public function show($trade)
     {
-
         $trade = Trade::findOrFail($trade);
 
         return view('users.trades.show', compact('trade'));
@@ -110,7 +107,6 @@ class ClientTradesController extends Controller
 
     public function tradeSumary(User $user, Trade $trade)
     {
-
         $user = Auth::user();
 
         $hoy        = Carbon::now(); //fecha
@@ -147,7 +143,6 @@ class ClientTradesController extends Controller
 
     public function sumCoinsUser($user)
     {
-
         $coins = [
             'Bitcoin'          => Exchange::whereIn('product_id', [40])->where('user_id', $user)->sum('qty'),
             'Ethereum'         => Exchange::whereIn('product_id', [41])->where('user_id', $user)->sum('qty'),
@@ -162,5 +157,4 @@ class ClientTradesController extends Controller
 
         return $coins;
     }
-
 }

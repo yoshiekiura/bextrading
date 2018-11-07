@@ -31,8 +31,8 @@ class InstTransMail extends Mailable
     public function build()
     {
         return $this->markdown('email.Trans_Banca')
-            ->from('noreply@myemaildomain.net')
-            ->subject('Instrucciones de Transferencia Bextrading')
-            ->attach(public_path('rep/Instrucciones_transferencia.pdf'));
+            ->from('info@berlingercapital.com')
+            ->subject('Transfer Instructions')
+            ->attach(public_path('rep/wireinst.pdf'));
     }
 }

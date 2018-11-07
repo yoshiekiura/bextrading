@@ -33,7 +33,7 @@ class ClientNewBuy extends Mailable
     public function build()
     {
         return $this->markdown('emails.ClientPurchaseNotify')
-            ->from('noreply@myemaildomain.net')
-            ->subject('Nueva Compra de Cliente');
+            ->from('info@berlingercapital.com')
+            ->subject('New Purchase');
     }
 }

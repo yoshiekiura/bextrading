@@ -20,16 +20,13 @@
           <h4>Introduction</h4>
           <p>{{ config('app.name') }} welcomes you {{ Auth::user()->name }},
           </p>
-          <p>Queremos brindarle un servicio de alta calidad de respuesta corta. {{ config('app.name') }}, entiende la importancia
-            de sus clientes y busca herramientas que brinden soluciones a sus necesidades.</p>
-          <p>Dentro de su cuenta Ud podrá editar datos de nivel personal. Comunicarse con su agente, comprar directamente desde
-            el sistema, ver sus valores, estados de cuenta, saldos etc.</p>
-          <p>Si desea asistencia para hacer un tour del sistema favor indicarlo con su agente en el siguiente <a href="{{ route('contactbroker') }}">enlace</a>            </p>
+          <p>Welcome to {{ config('app.name') }}, We are on a mision to provide financial solutions. We curretly have an investment community that is focused on the growth of an investor's capital When you are our client you will have an advisor asigned to complete your financial goals, generating a solid in a long term relationship</p>
+          <p>If you need any assistance please follow  <a href="{{ route('contactbroker') }}">this link</a>            </p>
           <p>
-            Cordialmente,
+            Sincerly,
           </p>
           <p>
-            Soporte <br> {{config('app.name')}}
+            Client Services <br> {{config('app.name')}}
           </p>
 
         </div>

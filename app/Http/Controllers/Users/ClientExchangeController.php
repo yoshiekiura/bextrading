@@ -48,7 +48,7 @@ class ClientExchangeController extends Controller
         ];
 
         $charty = Charts::create('area', 'highcharts')
-            ->title('Crypto currecy summary')
+            ->title('Summary Crypto Currency')
             ->colors(['lightblue', 'pink', 'orange', 'red', 'purple', 'brown', 'yellow', 'green', 'silver'])
             ->labels(['Bitcoin', 'Ethereum', 'Ripple', 'Bitcoin Cash', 'Litecoin', 'Cardano', 'Monero', 'Dash', 'Ethereum Classic'])
             ->values([

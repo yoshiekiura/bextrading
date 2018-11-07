@@ -60,7 +60,7 @@ class ClientProfilesController extends Controller
 
         //graficos Options
         $options = Charts::create('area', 'highcharts')
-            ->title('Open positions summary')
+            ->title('Summary Open positions')
             ->colors(['lightblue', 'pink', 'blue', 'red', 'purple', 'brown', 'yellow', 'green', 'silver', 'black', 'yellow'])
             ->labels(['Gold', 'Silver', 'Palladium', 'Platinium', 'Crude Oil', 'Gasoline', 'Cotton', 'Heating Oil', 'Natural Gas', 'Dollar Index', 'Bitcoin'])
             ->values([
@@ -71,7 +71,7 @@ class ClientProfilesController extends Controller
 
         //graficos opt positions
         $chart = Charts::create('area', 'highcharts')
-            ->title('Resumen Posiciones Abiertas vs Cerradas')
+            ->title('Summary open positions vs closed positions')
             ->colors(['lightblue', 'orange'])
             ->labels(['Closed', 'Open'])
             ->values([$closedtickets, $opentickets])
@@ -79,7 +79,7 @@ class ClientProfilesController extends Controller
 
         //grafico monedas
         $charty = Charts::create('bar', 'highcharts')
-            ->title('Resumen Criptodivisas')
+            ->title('Summary Crypto Currency')
             ->colors(['lightblue', 'pink', 'orange', 'red', 'purple', 'brown', 'yellow', 'green'])
             ->labels(['Bitcoin', 'Ethereum', 'Ripple', 'Bitcoin Cash', 'Litecoin', 'Cardano', 'Monero', 'Dash', 'Ethereum Classic'])
             ->values([
@@ -123,7 +123,7 @@ class ClientProfilesController extends Controller
         $bal       = Trade::userBalance();
 
         if ($uguaranty > 0 and $bal > $request->get('amount')) {
-            return back()->with('error', "Su cuenta tiene una deuda por broker guaranty por $ $uguaranty. Antes de hacer un retiro debe cancelar su deuda.Favor comuniquese con su agente para instrucciones.");
+            return back()->with('error', "Your account has an outstanding bill for Broker Guaranty of $ $uguaranty. Before request a withdrawal. Please pay all your bills on time, and pay off your debt as quickly as possible.");
         }
 
         $data = [
@@ -144,10 +144,10 @@ class ClientProfilesController extends Controller
             'nip'            => $request->get('nip'),
         ];
 
-        Mail::to('clients@mycgo.net')
+        Mail::to('info@berlingercapital.com')
             ->send(new ClientWithdrawalForm(Auth::user(), $data));
 
-        return back()->with('flash', 'Su Formulario de retiro fue enviado exitósamente!');
+        return back()->with('flash', 'Your form has been sent out!');
     }
 
     public function deposit()

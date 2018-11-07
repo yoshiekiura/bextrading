@@ -19,7 +19,7 @@
                     </div>
                     <div class="panel-wrapper collapse">
                         <div class="panel panel-default">
-                            <div class="panel-heading">Criptodivisas |
+                            <div class="panel-heading">Criptocurrencies |
                                 <small>All Crypto Currencies</small>
                             </div>
                             <div class="panel-body">
@@ -72,7 +72,7 @@
                                 <!-- Table Ends Here -->
                             </div>
                         </div>
-                        <div class="panel-footer">Criptodivisas</div>
+                        <div class="panel-footer">Cryptocurrency</div>
                     </div>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                                         <table class="table">
                                             <thead>
                                               <tr>
-                                               <th>Portfolio Balance </th>
+                                               <th>Equity Balance </th>
                                                <th>Cash Equity</th>
                                                <th>Total</th>
                                            </tr>
@@ -224,7 +224,7 @@
 
                      </div>
                      @if ($uguaranty > 0)
-                    <h4 style="color: #b71c1c">Your account ramain a debt for ${{ money_format('%i' , $uguaranty) }} on concept for Broker Guaranty. Please cancel as soon as possible.
+                   <h4 style="color: #b71c1c">Your account has outstanding bill for Broker Guaranty of ${{ money_format('%i' , $uguaranty) }}. Please pay all your bills on time, and pay off your debt as quickly as possible.
        </h4>
                      @endif
                  </div>
@@ -364,7 +364,7 @@
                       <tr>
                          <th>Portfolio Equity </th>
                          <th>Cash Equity</th>
-                         <th>otal</th>
+                         <th>Total</th>
                      </tr>
                  </thead>
                  <tbody>
@@ -376,7 +376,7 @@
              </tbody>
          </table>
          @if ($uguaranty > 0)
-        <h4 style="color: #b71c1c">Your account ramain a debt for ${{ money_format('%i' , $uguaranty) }} on concept for Broker Guaranty. Please cancel as soon as possible.
+       <h4 style="color: #b71c1c">Your account has outstanding bill for Broker Guaranty of ${{ money_format('%i' , $uguaranty) }}. Please pay all your bills on time, and pay off your debt as quickly as possible.
        </h4>
          @endif
      </div>
@@ -417,14 +417,14 @@
                                             <td class="text-center">Date</td>
                                             <td class="text-center">Action</td>
                                             <td class="text-center">Description</td>
-                                            <td class="text-center">Tarifa</td>
-                                            <td class="text-center">Monto de Compra</td>
+                                            <td class="text-center">Fee</td>
+                                            <td class="text-center">Purchanse amount</td>
                                             <td class="text-center">
-                                                Impuesto
+                                                Tax
                                             </td>
-                                            <td class="text-center">Cantidad Moneda</td>
+                                            <td class="text-center">Currency amount</td>
                                             <td class="text-right">
-                                                <p>Estado</p>
+                                                <p>Status</p>
                                             </td>
                                         </tr>
                                     </thead>
@@ -489,9 +489,9 @@
                                 <table class="table">
                                     <thead>
                                       <tr>
-                                        <th> Balance del Portafolio </th>
-                                        <th>Saldo Efectivo</th>
-                                        <th>Balance Total</th>
+                                        <th>Portfolio Equity </th>
+                                        <th>Chas Equity</th>
+                                        <th>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -503,9 +503,8 @@
                              </tbody>
                          </table>
                          @if ($uguaranty > 0)
-                         <h4 style="color: #b71c1c">Su cuenta tiene una deuda pendiente de ${{ money_format('%i' , $uguaranty) }} por concepto de Broker Guaranty. Por favor cancele lo antes posible para evitar inconvenientes.
-
-                         </h4>
+                        <h4 style="color: #b71c1c">Your account has outstanding bill for Broker Guaranty of ${{ money_format('%i' , $uguaranty) }}. Please pay all your bills on time, and pay off your debt as quickly as possible.
+       </h4>
                          @endif
                      </div>
                  </div>

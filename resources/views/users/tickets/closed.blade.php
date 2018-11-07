@@ -107,7 +107,7 @@
  </tbody>
 </table>
 @if ($uguaranty > 0)
-  <h4 style="color: #b71c1c">Your account ramain a debt for ${{ money_format('%i' , $uguaranty) }} on concept for Broker Guaranty. Please cancel as soon as possible.
+  <h4 style="color: #b71c1c">Your account has outstanding bill for Broker Guaranty of ${{ money_format('%i' , $uguaranty) }}. Please pay all your bills on time, and pay off your debt as quickly as possible.
        </h4>
 @endif
 

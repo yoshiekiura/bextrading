@@ -28,13 +28,13 @@
                 </div>
                 <div class="panel-wrapper collapse">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Criptomonedas |
+                        <div class="panel-heading">Cryptocurrencies |
                             <small>All Crypto Markets</small>
                         </div>
                         <div class="panel-body">
                             <!-- Table Starts Here -->
                             <section class="main-content">
-                                <h3>Valores actuales en USD
+                                <h3>Value in USD
                                     <br>
                                     <small>Market Capital With Gainers OR Loosers</small>
                                 </h3>
@@ -82,7 +82,7 @@
                             <!-- Table Ends Here -->
                         </div>
                     </div>
-                    <div class="panel-footer">Cripto Monedas | Valores Actuales</div>
+                    <div class="panel-footer">Cryptocurrencies | Values</div>
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Ordenes Cripto Monedas
+                <div class="panel-heading">Cryptocurrencies Orders
                     <a href="javascript:void(0);" data-perform="panel-collapse" data-toggle="tooltip" title=""
                        class="pull-right" data-original-title="Collapse Panel">
                         <em class="fa fa-minus"></em>
@@ -166,7 +166,7 @@
 
                                     @else
                                         <div class="col-6">
-                                            <h5>No se encontraron records...</h5>
+                                            <h5>No records found...</h5>
                                         </div>
                                     @endif
 

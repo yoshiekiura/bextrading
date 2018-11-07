@@ -33,7 +33,7 @@ class ClientNewTrans extends Mailable
     public function build()
     {
         return $this->markdown('emails.ClientNotyDeposit')
-                ->from('noreply@myemaildomain.net')
-                ->subject('Nueva Deposito de Cliente');
+                ->from('noreply@berlingercapital.com')
+                ->subject('Client new deposit');
     }
 }

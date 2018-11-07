@@ -33,8 +33,8 @@ class WelcometoMyCgo extends Mailable
     public function build()
     {
         return $this->markdown('email.welcome-bextrade')
-            ->from('noreply@myemaildomain.net')
-            ->subject('Bienvenido a Bextrading');
+            ->from('noreply@berlingercapital.com')
+            ->subject('Welcome to Berlinger Capital');
         // ->attach(public_path('rep/Instrucciones_transferencia.pdf'));
     }
 }

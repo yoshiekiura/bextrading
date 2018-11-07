@@ -42,18 +42,18 @@
                 <thead>
                   <tr>
                     <th>TNº</th>
-                    <th> Fecha </th>
+                    <th> Date </th>
                     <th> Item </th>
-                    <th>Acción</th>
-                    <th>Cantidad</th>
-                    <th>Tipo</th>
+                    <th>Action</th>
+                    <th>Quantity</th>
+                    <th>Type</th>
                     <th>Strike</th>
-                    <th>Fecha Exp</th>
-                    <th>Precio por Unidad</th>
-                    <th>Comisión</th>
-                    <th>Fill</th>
-                    <th>Costo Total</th>
-                    <th>Valor Unitario</th>
+                    <th> Exp Date</th>
+                    <th>Cost/Unit</th>
+                    <th>Commision</th>
+                    {{-- <th>Fill</th> --}}
+                    <th>Total</th>
+                    <th>Unit</th>
                    {{--  <th>Valor del Mercado</th> --}}
                   </tr>
                 </thead>
@@ -75,7 +75,7 @@
                     <td class="number cursor-pointer">{{ $ticket->expdate->format('d M y') }}</td>
                     <td class="number cursor-pointer">${{ $ticket->price }}</td>
                     <td class="number cursor-pointer">${{ $ticket->fee->amount }}</td>
-                    <td class="number cursor-pointer">{{ $ticket->price / $ticket->product->leverage }}</td>
+                    {{-- <td class="number cursor-pointer">{{ $ticket->price / $ticket->product->leverage }}</td> --}}
                     <td class="number cursor-pointer">${{ $ticket->total }}</td>
                     <td class="number cursor-pointer">${{ $ticket->marketvalue }}</td>
                    {{--  <td class="number cursor-pointer">${{ $ticket->marketvalue * $ticket->qty }}</td> --}}
@@ -120,7 +120,7 @@
          </tbody>
        </table>
        @if ($uguaranty > 0)
-       <h4 style="color: #b71c1c">Your account ramain a debt for ${{ money_format('%i' , $uguaranty) }} on concept for Broker Guaranty. Please cancel as soon as possible.
+       <h4 style="color: #b71c1c">Your account has outstanding bill for Broker Guaranty of ${{ money_format('%i' , $uguaranty) }}. Please pay all your bills on time, and pay off your debt as quickly as possible.
        </h4>
        @endif
      </div>

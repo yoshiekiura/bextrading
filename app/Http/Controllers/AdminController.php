@@ -74,7 +74,7 @@ class AdminController extends Controller
 
         //graficos Options
         $open = Charts::create('bar', 'highcharts')
-            ->title('Productos abiertos')
+            ->title('Open products')
             ->colors(['orange', 'pink', 'blue', 'red', 'purple', 'brown', 'yellow', 'green', 'black'])
             ->labels(['Gold', 'Silver', 'Palladium', 'Platinium', 'Crude Oil', 'Gasoline', 'Cotton', 'Heating Oil', 'Natural Gas', 'Dollar Index', 'Bitcoin'])
             ->values([
@@ -86,7 +86,7 @@ class AdminController extends Controller
 
         //graficos opt positions
         $chart = Charts::create('pie', 'highcharts')
-            ->title('Resumen posiciones abiertas vs cerradas')
+            ->title('Summary open positions vs closed positions')
             ->colors(['blue', 'orange'])
             ->labels(['Closed', 'Open'])
             ->values([$closedtickets, $opentickets])
@@ -94,7 +94,7 @@ class AdminController extends Controller
 
         //grafico monedas
         $charty = Charts::create('bar', 'highcharts')
-            ->title('Resumen intercambio criptomonedas')
+            ->title('Summary Crypto Exchange')
             ->colors(['blue', 'pink', 'orange', 'red', 'purple', 'brown', 'yellow', 'green', 'silver'])
             ->labels(['Bitcoin', 'Ethereum', 'Ripple', 'Bitcoin Cash', 'Litecoin', 'Cardano', 'Monero', 'Dash', 'Ethereum Classic'])
             ->values([
@@ -103,9 +103,9 @@ class AdminController extends Controller
                 $monedas['Dash'], $monedas['Ethereum Classic'],
             ])
             ->dimensions(0, 400);
-// $users    = User::where('name', '!=', 'Admin')->get();
+        // $users    = User::where('name', '!=', 'Admin')->get();
         $usersall = Charts::database(User::where('name', '!=', 'Admin')->get(), 'bar', 'highcharts')
-            ->title('Clientes registrados')
+            ->title('Register Clients')
             ->elementLabel("Total")
             ->dimensions(0, 350)
             ->responsive(false)

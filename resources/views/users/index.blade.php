@@ -1,4 +1,4 @@
-@extends('layouts.master') 
+@extends('layouts.master')
 @section('content') {{--inicio--}} {!! Charts::styles() !!}
 <h3>
   Dashboard
@@ -27,7 +27,7 @@
               <div class="panel-body">
                 <!-- Table Starts Here -->
                 <section class="main-content">
-                  <h3>Valores actuales en USD
+                  <h3>Current Values in USD
                     <br>
                     <small>Market Capital With Gainers OR Loosers</small>
                   </h3>

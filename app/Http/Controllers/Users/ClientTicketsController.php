@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use ConsoleTVs\Charts\Facades\Charts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 use Tradesys\Events\NotifyClientAfterBuy;
 use Tradesys\Http\Controllers\Controller;
 use Tradesys\Mail\ClientNewBuy;
@@ -16,7 +16,6 @@ use Tradesys\User;
 
 class ClientTicketsController extends Controller
 {
-
     public function __construct()
     {
         return $this->middleware('auth');
@@ -26,7 +25,6 @@ class ClientTicketsController extends Controller
 
     public function index()
     {
-
         $hoy         = Carbon::now();
         $user        = Auth::id();
         $bal         = Trade::userBalance();
@@ -66,7 +64,7 @@ class ClientTicketsController extends Controller
         ];
         //graficos Options
         $options = Charts::create('bar', 'highcharts')
-            ->title('Resumen Posiciones Abiertas')
+            ->title('Summary Open positions')
 
             ->colors(['lightblue', 'Silver', 'Gold', 'red', 'black', 'brown', 'yellow', 'purple', 'green', 'gray', 'pink', 'darkgreen', 'orange'])
             ->labels(['Gold', 'Silver', 'Palladium', 'Platinium', 'Crude Oil', 'Gasoline', 'Cotton', 'Heating Oil', 'Natural Gas', 'Dollar Index', 'Euro', 'Bitcoin'])
@@ -83,7 +81,6 @@ class ClientTicketsController extends Controller
 
     public function closedTickets()
     {
-
         $bal          = Trade::userBalance();
         $equity       = Trade::userEquity();
         $uguaranty    = Trade::userBrokerGuaranty();
@@ -99,7 +96,6 @@ class ClientTicketsController extends Controller
 
     public function purchase()
     {
-
         $bal         = Trade::userBalance();
         $equity      = Trade::userEquity();
         $uguaranty   = Trade::userBrokerGuaranty();
@@ -116,7 +112,6 @@ class ClientTicketsController extends Controller
      */
     public function userpurchase(Request $request)
     {
-
         $this->validate(request(), [
             'cantidad' => 'required',
             'tipo'     => 'required',
@@ -128,13 +123,12 @@ class ClientTicketsController extends Controller
             'tipo'     => request('tipo'),
         ];
 
-        Mail::to('clients@mycgo.net')
+        Mail::to('Summary Open positions')
             ->send(new ClientNewBuy(Auth::user(), $fields));
 
         event(new NotifyClientAfterBuy(Auth::user()));
 
         return redirect()->route('usertickets')
-            ->with('flash', 'Su transacción fue enviada con éxito y será procesada en las próximas horas. La confirmación de orden ha sido enviada a su correo.');
+            ->with('flash', 'Transaction was sent out and will be process in the next hrs. Order confirmation has been sent to your email address');
     }
-
 }

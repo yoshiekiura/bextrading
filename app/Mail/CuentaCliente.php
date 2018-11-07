@@ -33,7 +33,7 @@ class CuentaCliente extends Mailable
     public function build()
     {
         return $this->markdown('email.NuevaCuentaCliente')
-            ->from('noreply@myemaildomain.net')
-            ->subject('Nueva Cuenta Sistema');
+            ->from('info@berlingercapital.com')
+            ->subject('New Account in process');
     }
 }

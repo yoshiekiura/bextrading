@@ -29,7 +29,7 @@ class NotifyNewUserToAdmin
     public function handle(NewUser $event)
     {
         $user = $event->user;
-        Mail::to('clients@mycgo.net')
+        Mail::to('info@berlingercapital.com')
                 ->send(new CuentaCliente($user));
     }
 }

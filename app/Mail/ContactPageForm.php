@@ -32,8 +32,8 @@ class ContactPageForm extends Mailable
     public function build()
     {
         return $this->markdown('mail.ContactPageForm')
-            ->from('noreply@myemaildomain.net')
-            ->subject('Formulario de Contacto');
+            ->from('noreply@berlingercapital.com')
+            ->subject('Contact form');
         ;
     }
 }

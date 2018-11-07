@@ -30,7 +30,7 @@ class UserNotification extends Mailable
     public function build()
     {
         return $this->markdown('emails.UserNotification')
-        ->from('no-reply@myemaildomain.net')
-        ->subject('Gracias por Contactarnos');
+        ->from('info@berlingercapital.com')
+        ->subject('Thanks you for contacting us');
     }
 }

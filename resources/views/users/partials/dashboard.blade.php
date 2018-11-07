@@ -25,7 +25,7 @@
                      <div class="row row-table row-flush">
                        <div class="col-xs-12">
                          <p class="mb0">${{$equity}}<em class="">USD</em></p>
-                         <h4 class="m0">On Market</h4>
+                         <h4 class="m0">In Market</h4>
                          <span class="f-left m-t-10">
                           <i class="fa fa-bar-chart"> </i>Purchase Volume
                         </span>

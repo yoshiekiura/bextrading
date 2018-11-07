@@ -27,7 +27,6 @@ Route::get('/clientportal', 'Web\PagesController@portal')->name('portal');
 
 Auth::routes();
 Route::get('/set_language/{lang}', 'web\AppController@setLanguage')->name('set_language');
-
  // Registration Routes...
  Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
  Route::post('register', 'Auth\RegisterController@register');
