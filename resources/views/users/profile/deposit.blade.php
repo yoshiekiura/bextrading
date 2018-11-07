@@ -10,7 +10,7 @@
             <div class="col-lg-12">
                 <h2>Wire Instructions</h2>
                 <div class="panel-body">
-                    <p class="pull-right"><a href="{{ asset('rep/supdf') }}"
+                    <p class="pull-right"><a href="{{ asset('rep/wireinst.pdf') }}"
                     target="_blank">DOWNLOAD IN PDF</a></p>
                     <p>DOWNLOAD INSTRUCTIONS IN PDF FORMAT,PRINT IT AND TAKE IT TO YOUR BANK FOR FUNDING YOUR ACCOUNT Nº {{ $user->id }}.</p>
                     <hr>
