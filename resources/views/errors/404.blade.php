@@ -16,7 +16,7 @@
                                   <div class="tab-pane active" id="tab_default_2">
                                     <div class="panel panel-body">
                                         <form class="intro-form" action="#" id="invite-2" method="POST">
-                                           <h5><i class="fa fa-lock"></i>  ¡NO está autorizado!<span>Autorizado</span></h5>
+                                           <h5><i class="fa fa-lock"></i>   Not Authorize!<span></span></h5>
                                        </form>
                                        <span id="result"></span>
                                    </div>

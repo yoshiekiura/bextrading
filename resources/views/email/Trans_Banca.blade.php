@@ -1,8 +1,8 @@
-@component('mail::message') 
-# Instrucciones de transferencia 
+@component('mail::message')
+# Wire Instructions
 
-## {{$user->name}},<br> 
-Adjunto encontrará las instrucciones en formato PDF para descargarlas e imprimirlas para su banco o puede revisarlas a continuación:
+## {{$user->name}},<br>
+Attached you'll find the instructions to fund your account.
 
 Banco Intermediario:<br>
 Bank of New York Mellon<br>

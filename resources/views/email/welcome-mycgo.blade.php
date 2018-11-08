@@ -1,12 +1,12 @@
 @component('mail::message')
-# ¡ Enhorabuena  {{$user->name}} !
+# ¡ Great  {{$user->name}} !
 
 Su cuenta  ha sido creada exitósamente! Su número de cuenta es la **{{$user->id}}** .
 Para ingresar a su cuenta, digite la dirección http://bextrading.test luego, ingrese
 su correo **{{ $user->email }}** y la contraseña creada por usted en el proceso de registro
 
 @component('mail::button', ['url' => url( '/login')])
-        Ingresar
+        Login
 @endcomponent
 
 **Su primer trade**

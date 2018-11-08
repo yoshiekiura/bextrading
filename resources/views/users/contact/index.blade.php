@@ -24,7 +24,7 @@
                               <span class="input-group-addon">
                                <span class="fa fa-envelope"></span>
                            </span>
-                                        <textarea name="mensaje" placeholder="Insert your message.."
+                                        <textarea name="mensaje" placeholder="Type your message"
                                                   rows="3"
                                                   class="form-control"></textarea>
                                         {!! $errors->first('mensaje', '

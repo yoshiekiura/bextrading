@@ -23,7 +23,7 @@
                     <div class="panel-heading">New Category</div>
                     <div class="panel-body">
                         <form class="form-group" action="{{ route('updatecat',$category->id) }}" method="post">
-                            {{ csrf_field() }} {{ method_field('put') }}
+                            {{ csrf_field() }} {{ method_field('PUT') }}
 
                             <div class="col-md-9">
                                 <div class="form-group" style="color: #0C1021">
