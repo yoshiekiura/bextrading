@@ -314,8 +314,8 @@ class TradesController extends Controller
 
             $fields = ['descripcion' => $request->input('action'), 'total' => $request->input('amount')];
 
-            Mail::to(config('app.guard'))
-                    ->send(new ClientNewTrans($trade->user, $fields));
+            // Mail::to(config('app.guard'))
+            //         ->send(new ClientNewTrans($trade->user, $fields));
         }
 
         $trade->save();
